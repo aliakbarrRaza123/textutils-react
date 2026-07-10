@@ -10,7 +10,7 @@ export default function Navbar(props)
     <>
       <nav className={`navbar navbar-expand-lg navbar-${props.mode === "light" ? "light" : "dark"} bg-${props.mode === "light" ? "light" : "dark"}`}>
         <div className="container-fluid">
-          <Link className="navbar-brand" to="#">
+          <Link className="navbar-brand" to="/">
             {props.title}
           </Link>
           <button
@@ -26,16 +26,16 @@ export default function Navbar(props)
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="#">
+                <Link className="nav-link active" aria-current="page" to="/">
                   Home
                 </Link>
               </li>
 
-              {/* <li className="nav-item">
+              <li className="nav-item">
                 <Link className="nav-link" to="/about">
                   About
                 </Link>
-              </li> */}
+              </li> 
             </ul>
             {/* <form className="d-flex" role="search">
               <input

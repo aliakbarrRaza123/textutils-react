@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import Alert from "./components/Alert";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 // generally main app function can return only one jsx element(tag+content)
 // jsx fragment can return more than one jsx element using (<> and </>)
