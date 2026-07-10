@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-// import About from "./components/About";
+import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import Alert from "./components/Alert";
@@ -53,7 +53,7 @@ function App() {
 
   return (
     <>
-      {/* <Router> */}
+      <Router>
         <Navbar
           title="TextUtils"
           about={" "}
@@ -63,22 +63,22 @@ function App() {
         />
         <Alert alert={alert}/>
         <div className="container my-3">
-          {/* <Routes> */}
-            {/* <Route exact path="/about" element={<About />} /> */}
+          <Routes>
+            <Route path="/about" element={<About />} />
             {/* use exact keyword for exact matching (before v6,v7) */}
-            {/* <Route
-              exact path="/"
-              element={ */}
+            <Route
+              path="/"
+              element={
                 <TextForm
                   showAlert={showAlert}
                   heading="Write your text below to analyze :"
                   mode={mode}
                 /> 
-            {/* } 
-            /> */}
-          {/* </Routes> */}
+              }
+            ></Route>
+          </Routes>
         </div>
-      {/* </Router> */}
+      </Router>
     </>
   );
 }
