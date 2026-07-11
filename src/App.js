@@ -30,12 +30,10 @@ function App() {
       setMode("dark");
       document.body.style.backgroundColor = "#042743";
       showAlert("Dark mode has been enabled", "success");
-      document.title = "TextUtils - Dark Mode";
     } else {
       setMode("light");
       document.body.style.backgroundColor = "white";
       showAlert("Light mode has been enabled", "success");
-      document.title = "TextUtils - Light Mode";
     }
   };
 
@@ -64,14 +62,14 @@ function App() {
         <Alert alert={alert}/>
         <div className="container my-3">
           <Routes>
-            <Route path="/about" element={<About />} />
+            <Route exact path="/about" element={<About mode={mode}/>} />
             {/* use exact keyword for exact matching (before v6,v7) */}
             <Route
-              path="/"
+              exact path="/"
               element={
                 <TextForm
                   showAlert={showAlert}
-                  heading="Write your text below to analyze :"
+                  heading="Try TextUtils - Word Counter , Character Counter"
                   mode={mode}
                 /> 
               }
